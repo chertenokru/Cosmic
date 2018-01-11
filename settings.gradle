@@ -1,4 +1,3 @@
-include 'desktop', 'android', 'core'
-include 'editor'
-findProject(':editor')?.name = 'Editor'
+include 'desktop', 'editor','android', 'core'
+
 
