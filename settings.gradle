@@ -1,1 +1,4 @@
 include 'desktop', 'android', 'core'
+include 'editor'
+findProject(':editor')?.name = 'Editor'
+
