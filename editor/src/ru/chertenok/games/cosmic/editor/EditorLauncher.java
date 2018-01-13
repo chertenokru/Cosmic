@@ -2,6 +2,7 @@ package ru.chertenok.games.cosmic.editor;
 
 import com.badlogic.gdx.ApplicationListener;
 import com.badlogic.gdx.backends.lwjgl.LwjglAWTCanvas;
+import ru.chertenok.games.cosmic.MyCosmicGame;
 
 import javax.swing.*;
 import java.awt.*;
@@ -101,7 +102,7 @@ public class EditorLauncher  extends JFrame {
 
             if (sampleName == null || sampleName.isEmpty()) {
                 System.out.println("Sample name is empty cannot launch");
-                return;
+              //  return;
             }
 
             launchSample(sampleName);
@@ -117,7 +118,7 @@ public class EditorLauncher  extends JFrame {
                 container.remove(lwjglAWTCanvas.getCanvas());
             }
 
-            ApplicationListener sample =null;//= SampleFactory.newSample(name);
+            ApplicationListener sample = new MyCosmicGame();//= SampleFactory.newSample(name);
 
             lwjglAWTCanvas = new LwjglAWTCanvas(sample);
             lwjglAWTCanvas.getCanvas().setSize(CANVAS_WIDTH, HEIGHT);
